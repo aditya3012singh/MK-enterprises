@@ -322,7 +322,7 @@ export default function Products() {
             viewport={{ once: true }}
           >
             {[
-  { icon: Package, value: "10+ Units", desc: "Minimum Bulk Order" },
+  { icon: Package, value: "10+ Units", desc: "Minimum Bulk Order"  },
   { icon: Truck, value: "Free", desc: "Delivery on Bulk Orders" },
   {
     icon: () => (
@@ -347,7 +347,7 @@ export default function Products() {
   >
     <div className="bg-white bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
       {typeof item.icon === "function" && item.icon.name === "" // anonymous function
-        ? item.icon() || ""
+        ? item.icon() || "@"
         : React.createElement(item.icon, {
             className: "text-white",
             size: 32
